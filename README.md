@@ -30,3 +30,15 @@ Then in the angular folder run:
 ```pwsh
 ng serve
 ```
+
+Use the passport.js documentation at
+https://www.passportjs.org/packages/passport-jwt/ as a guide
+
+To connect to your database, from the root folder run:
+
+```pwsh
+nodemon app.js
+```
+
+You can use [Postman](https://www.postman.com/) to test your user/login (POST),
+user/register (POST), and user/protected routes (GET)

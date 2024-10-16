@@ -1,11 +1,9 @@
 const express = require('express');
-const cors = require('cors');
-const path = require('path');
+const cors = require('cors'); // connects the http requests from localhost:4200 (Angular) to localhost:3000 (express)
+const path = require('path'); // access to the node.js file system
 const passport = require('passport');
 
-/**
- * -------------- GENERAL SETUP ----------------
- */
+/*-------------- GENERAL SETUP ---------------- */
 
 // Gives us access to variables set in the .env file via `process.env.VARIABLE_NAME` syntax
 require('dotenv').config();
@@ -37,17 +35,13 @@ app.use(cors());
 // When you run `ng build`, the output will go to the ./public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-/**
- * -------------- ROUTES ----------------
- */
+/* -------------- ROUTES ---------------- */
 
 // Imports all of the routes from ./routes/index.js
 app.use(require('./routes'));
 
 
-/**
- * -------------- SERVER ----------------
- */
+/* -------------- SERVER ---------------- */
 
 // Server listens on http://localhost:3000
 app.listen(3000);

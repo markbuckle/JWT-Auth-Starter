@@ -1,25 +1,32 @@
-## Disclaimer
+## Getting started
 
-The patterns shown in this repository are meant for educational purposes.  While this is sufficiently secure to use for personal projects, there are considerations not mentioned in this tutorial series that should be explored for an enterprise-grade implementation.
+Once starter package has been cloned, in the root folder run:
 
-In other words, this will get you 95% of the way there, but do you own research to ensure your implementation is secure!
+```pwsh
+npm install
+```
 
-## How to use this Repo
+Then go to the angular folder and run npm install again.
 
-This repo has two branches:
+Update your .env file with NODE_ENV, DB_STRING, and DB_STRING_PROD (optional).
+You won't need a production string for development/testing of course.
 
-* master
-* final
+Next generate the public & private rsa key pairs from the root folder with:
 
-The `master` branch has a starter template for creating what is in the `final` branch.
+```pwsh
+node generateKeypair.js
+```
 
-There is an Angular app included, but is entirely optional.  Since JWT authentication is commonly seen in SPAs (single page applications) like Angular, I decided it was important to at least have a basic implementation.
+Make sure your mongoDB is running in the background.
 
-## How to run the app
+Next, in the root folder run:
 
-When you go to each branch, the `README.md` will show you how to start the app.
+```pwsh
+node app.js
+```
 
-The `master` branch is incomplete and you can follow the written or video tutorials to complete:
+Then in the angular folder run:
 
-* Written - https://www.zachgollwitzer.com/posts/2020/passport-js/
-* Video - https://www.youtube.com/playlist?list=PLYQSCk-qyTW2ewJ05f_GKHtTIzjynDgjK
+```pwsh
+ng serve
+```

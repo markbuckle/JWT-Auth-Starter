@@ -1,4 +1,5 @@
 node_modules/
+.angular/
 angular/node_modules/
 .env
 id_rsa_priv.pem

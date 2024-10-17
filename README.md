@@ -42,3 +42,8 @@ nodemon app.js
 
 You can use [Postman](https://www.postman.com/) to test your user/login (POST),
 user/register (POST), and user/protected routes (GET)
+
+If your angular packages are outdated run:
+```pwsh
+ng update @angular/core @angular/cli
+```

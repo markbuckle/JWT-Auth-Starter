@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  @ViewChild('loginform', { static: false }) loginForm: NgForm;
+  @ViewChild('loginform', { static: false }) loginForm: NgForm = {} as NgForm;
 
   constructor(
       private http: HttpClient, 

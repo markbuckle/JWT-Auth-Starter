@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  @ViewChild('registerform', { static: false }) registerForm: NgForm;
+  @ViewChild('registerform', { static: false }) registerForm: NgForm = {} as NgForm;
 
   constructor(private http: HttpClient, private router: Router) { }
 

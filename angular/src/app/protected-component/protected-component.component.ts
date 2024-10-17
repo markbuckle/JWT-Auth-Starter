@@ -10,7 +10,7 @@ export class ProtectedComponentComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  message: String
+  message: string = '';
 
   // Execute this HTTP request when the route loads
   ngOnInit() {

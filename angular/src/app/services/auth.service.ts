@@ -6,7 +6,7 @@ export class AuthService {
 
     constructor() {}
           
-    setLocalStorage(responseObj) {}          
+    setLocalStorage(responseObj: any) {}          
 
     logout() {}
 

@@ -29,9 +29,10 @@ export class RegisterComponent implements OnInit {
       password: password
     };
 
+    // when the submit button is pressed, the post request is sent to our express app
     this.http.post('http://localhost:3000/users/register', reqObject, { headers: headers }).subscribe(
       
-      // The response data
+      // The response data is received and passed to our local storage
       (response) => {
         console.log(response);
       },

@@ -44,6 +44,10 @@ You can use [Postman](https://www.postman.com/) to test your user/login (POST),
 user/register (POST), and user/protected routes (GET)
 
 If your angular packages are outdated run:
+
 ```pwsh
 ng update @angular/core @angular/cli
 ```
+
+Use [Moment](https://momentjs.com/) to parse, validate, manipulate, and display
+dates and times in js/ts files like auth.services.ts.

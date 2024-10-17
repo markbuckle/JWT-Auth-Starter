@@ -5,10 +5,11 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
+    // take each http request and attach the jwt to it
     intercept(req: HttpRequest<any>,
               next: HttpHandler): Observable<HttpEvent<any>> {
 
-        const idToken = localStorage.getItem("id_token");
+        const idToken = localStorage.getItem("token");
 
         if (idToken) {
             const cloned = req.clone({
